@@ -1,0 +1,19 @@
+{
+  "name": "adoorei-ecommerce",
+  "version": "1.0.0",
+  "description": "Teste Loja Virtual Adorei",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anacnogueira/adoorei-ecommerce.git"
+  },
+  "author": "Ana Claudia Nogueira",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anacnogueira/adoorei-ecommerce/issues"
+  },
+  "homepage": "https://github.com/anacnogueira/adoorei-ecommerce#readme"
+}
