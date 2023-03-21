@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/anacnogueira/adoorei-ecommerce/issues"
   },
-  "homepage": "https://github.com/anacnogueira/adoorei-ecommerce#readme"
+  "homepage": "https://github.com/anacnogueira/adoorei-ecommerce#readme",
+  "dependencies": {
+    "gulp-kit": "^0.3.0"
+  }
 }
