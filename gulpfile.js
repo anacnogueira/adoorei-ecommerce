@@ -2,6 +2,7 @@ const gulp = require("gulp");
 
 const { series, parallel, dest } = require("gulp");
 
+const htmlmin = require("gulp-htmlmin");
 const kit = require("gulp-kit");
 
 filesPath = {
@@ -11,9 +12,9 @@ filesPath = {
 function kitTask(done) {
 	gulp.src(filesPath.html)
 		.pipe(kit())
-		// .pipe(htmlmin({
-		// 	collapseWhitespace: true
-		// }))
+		.pipe(htmlmin({
+			collapseWhitespace: true
+		}))
 		.pipe(dest("./dist"))
 	done();
 }
