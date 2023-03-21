@@ -29,7 +29,6 @@ O carrinho da sua loja deverá conter as seguintes ações:
 
 
 ## Instruções
-
     * Utilize a [FakeStoreAPI](https://fakestoreapi.com/docs) para consultar os produtos e as categorias;
     * Conte uma história. Utilize a metodologia de commits semânticos;
 
