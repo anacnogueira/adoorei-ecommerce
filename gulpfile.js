@@ -2,6 +2,7 @@ const gulp = require("gulp");
 
 const { series, parallel, dest } = require("gulp");
 
+const browserSync = require('browser-sync').create();
 const htmlmin = require("gulp-htmlmin");
 const kit = require("gulp-kit");
 
@@ -19,5 +20,15 @@ function kitTask(done) {
 	done();
 }
 
+function watch() {
+	browserSync.init({
+		server: {
+			baseDir: "./dist"
+		}
+	});
+
+	gulp.watch(filesPath.html, kitTask).on("change", browserSync.reload);
+}	
 
 exports.kitTask = kitTask;
+exports.watch = watch;

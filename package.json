@@ -20,6 +20,7 @@
     "gulp-kit": "^0.3.0"
   },
   "devDependencies": {
+    "browser-sync": "^2.29.0",
     "gulp": "^4.0.2",
     "gulp-htmlmin": "^5.0.1"
   }
