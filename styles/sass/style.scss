@@ -1,5 +1,3 @@
 @import 'helpers/variables';
-
-body {
-    background-color: $background-color;
-}
+@import 'helpers/mixins';
+@import 'base/reset';
