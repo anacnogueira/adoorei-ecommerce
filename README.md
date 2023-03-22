@@ -23,8 +23,8 @@ O carrinho da sua loja deverá conter as seguintes ações:
    * Botão para a finalização do pedido;
 
 ## Instruções
-    * Utilize a [FakeStoreAPI](https://fakestoreapi.com/docs) para consultar os produtos e as categorias;
-    * Conte uma história. Utilize a metodologia de commits semânticos;
+   * Utilize a [FakeStoreAPI](https://fakestoreapi.com/docs) para consultar os produtos e as categorias;
+   * Conte uma história. Utilize a metodologia de commits semânticos;
 
 ## Stack
 Este projeto deverá usar a seguinte stack de desenvolvimento:
