@@ -4,3 +4,13 @@
 @import 'base/fonts';
 @import 'font-awesome/font-awesome';
 @import 'layout/general';
+@import 'layout/header';
+
+header {
+	.middle-header {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		padding: 0 10px;		
+	}
+}

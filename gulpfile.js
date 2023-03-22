@@ -42,7 +42,8 @@ function sassTask(done) {
 	 			path.basename += ".min";
 	 		}	 		
 	 	}))
-		.pipe(dest("./dist/styles"))
+		 .pipe(dest("./dist/styles"))
+
 	done();
 }
 
@@ -54,7 +55,7 @@ function watch() {
 	});
 
 	gulp.watch(filesPath.html, kitTask).on("change", browserSync.reload);
-	gulp.watch(filesPath.sass, sassTask).on("change", browserSync.reload);
+	gulp.watch("./styles/sass/**/*.scss", sassTask).on("change", browserSync.reload);
 }
 
 exports.kitTask = kitTask;
