@@ -1,0 +1,28 @@
+.top__searchbar {
+    vertical-align: middle;		
+	width:30%;
+	
+	.search-form-input-search {
+		width: 97%;
+	}		
+	
+	.search-form-elements {
+		display: flex;
+		justify-content: space-between;
+
+		input[type=search] {
+    		width: 98%;
+		}
+
+		button {
+    		background: 0 0;
+    		border: 1px solid;
+    		border-color: #ccc;
+    		color: $third-color;
+    		font-size: 1.6rem;
+    		margin-left: -2px;
+    		padding: 4px;
+    		height: 37px;
+		}
+	}
+}
