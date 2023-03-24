@@ -16,6 +16,7 @@ const kit = require("gulp-kit");
 filesPath = {
 	html: "./*.kit",
 	sass: "./styles/sass/*.scss",
+	js: "./js/**/*.js",
 }
 
 function kitTask(done) {
@@ -47,6 +48,21 @@ function sassTask(done) {
 	done();
 }
 
+function jsTask(done) {
+	gulp.src(filesPath.js)
+		.pipe(plumber({ errorHandler: notifier.error }))
+		// .pipe(babel({
+		// 	presets: ["@babel/env"]
+		// }))
+		// .pipe(concat("project.js"))
+		// .pipe(uglify())
+		// .pipe(rename({
+		// 	suffix: ".min"
+		// }))
+		.pipe(dest("./dist/js"))
+	done();
+}
+
 function watch() {
 	browserSync.init({
 		server: {
@@ -56,14 +72,16 @@ function watch() {
 
 	gulp.watch(filesPath.html, kitTask).on("change", browserSync.reload);
 	gulp.watch("./styles/sass/**/*.scss", sassTask).on("change", browserSync.reload);
+	gulp.watch(filesPath.js, jsTask).on("change", browserSync.reload);
 }
 
 exports.kitTask = kitTask;
 exports.sassTask = sassTask;
 exports.watch = watch;
+exports.jsTask = jsTask;
 
 //Gulp Serve
-exports.build = parallel(sassTask, kitTask);
+exports.build = parallel(sassTask, jsTask, kitTask);
 
 //Gulp Default command
 exports.default = series(exports.build, watch);
